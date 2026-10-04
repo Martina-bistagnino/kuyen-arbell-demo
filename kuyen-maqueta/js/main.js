@@ -3,12 +3,14 @@
  * KUYEN ARBELL
  * Maqueta comercial de presentación.
  *
- * Los enlaces externos son únicamente demostrativos.
- * La navegación interna entre páginas permanece activa.
+ * Los botones externos son únicamente visuales.
+ * La navegación interna permanece habilitada.
  */
 
-// Desactivar los enlaces externos de la maqueta.
-document.querySelectorAll('[data-demo="true"]').forEach((link) => {
+// Desactivar los botones demostrativos.
+document.querySelectorAll('[data-demo]').forEach((link) => {
+  link.setAttribute('aria-disabled', 'true');
+
   link.addEventListener('click', (event) => {
     event.preventDefault();
   });
